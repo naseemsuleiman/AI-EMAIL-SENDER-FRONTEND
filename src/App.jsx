@@ -9,6 +9,9 @@ function App() {
   const [isGenerating, setIsGenerating] = useState(false)
   const [isSending, setIsSending] = useState(false)
 
+  // ✅ Your backend URL
+  const API_BASE = "https://ai-email-sender-6ejm.onrender.com"
+
   const generateEmail = async () => {
     if (!prompt.trim()) {
       alert('Please enter a prompt')
@@ -17,7 +20,7 @@ function App() {
     
     setIsGenerating(true)
     try {
-      const res = await fetch('/generate', {
+      const res = await fetch(`${API_BASE}/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt })
@@ -39,7 +42,7 @@ function App() {
     
     setIsSending(true)
     try {
-      await fetch('/send', {
+      await fetch(`${API_BASE}/send`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
