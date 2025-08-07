@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3a0ca3;
+  --accent-color: #4cc9f0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --success-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: var(--dark-color);
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.app-subtitle {
+  color: #666;
+  font-size: 1rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.generate-btn {
+  background-color: var(--accent-color);
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.generate-btn:hover {
+  background-color: #3ab7d8;
+}
+
+.generate-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.send-btn {
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.send-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.send-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
